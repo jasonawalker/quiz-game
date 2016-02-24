@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   </head>
   <body id="background">
     <div class="container" id="header">
@@ -20,14 +21,14 @@
             <label for="qs">Questions:</label>
             <input type="text" name="questions">
           </div>
-          <button type="button" class="btn btn-info">Submit To Begin</button>
+          <button id="submit" type="button" class="btn btn-info">Submit To Begin</button>
         </form>
       </div>
       <div class="col-sm-4"></div>
     </div>
-    <div id="asking" class="row">
+    <div id="game" class="row">
       <div class="col-sm-3"></div>
-      <div class="col-sm-6" id="game">
+      <div class="col-sm-6" id="main">
         <div id="num">
           <p class="text-right">Question 1/2<p>
         </div>
@@ -45,5 +46,6 @@
       </div>
       <div class="col-sm-3"></div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
