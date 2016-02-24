@@ -9,7 +9,22 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body id="background">
-    <div class="container" id="title">
-
+    <div class="container" id="header">
+      <p class="text-center" id="title">VOCABULARY QUIZ</p>
+    </div>
+    <div id="choices" class = "row">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4 text-center">
+        <form role="form" method="post" action="demoform.asp">
+          <div class="form-group">
+            <label for="questions">Questions:</label>
+            <input type="text" name="questions">
+          </div>
+          <p class="text-center">Submit to begin.</p>
+          <button type="button" class="btn btn-info" value="SumbitButton">Submit</button>
+        </form>
+      </div>
+      <div class="col-sm-4"></div>
+    </div>
   </body>
 </html>
