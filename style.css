@@ -5,3 +5,7 @@
 #header{
   border: 1px solid black;
 }
+
+#input, #game{
+  border: 1px solid black;
+}
