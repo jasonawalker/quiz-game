@@ -6,16 +6,17 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   </head>
   <body id="background">
-    <div class="container" id="header">
-      <p class="text-center" id="title">VOCABULARY QUIZ</p>
+    <div class="row">
+      <div id = "header" class = "col-sm-12">
+        <p class="text-center" id="title">VOCABULARY QUIZ</p>
+      </div>
     </div>
-    <div id="intro" class = "row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4 text-center" id="input">
+    <div class="row">
+      <div id="intro" class="col-sm-12 text-center">
         <form role="form">
           <div class="form-group">
             <label for="qs">Questions:</label>
@@ -24,7 +25,6 @@
           <button id="submit" type="button" class="btn btn-info">Submit To Begin</button>
         </form>
       </div>
-      <div class="col-sm-4"></div>
     </div>
     <div id="game" class="row">
       <div class="col-sm-3"></div>
