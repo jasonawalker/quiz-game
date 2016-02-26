@@ -1,11 +1,11 @@
 $(document).ready(function(){
-  $("#game").hide();
+  $("#main").hide();
 });
 
 $(document).ready(function(){
   $("#submit").click(function(){
     $("#intro").fadeOut("200", function(){
-      $("#game").fadeIn("200");
+      $("#main").fadeIn("200");
     });
   })
 });
