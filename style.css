@@ -2,10 +2,17 @@
   background-color: #d9d9d9;
 }
 
-#header{
-  border: 1px solid black;
+#input, #main, #intro, #final{
+  border: 3px solid #737373;
+  background-color: #737373;
+  border-radius: 25px;
 }
 
-#input, #main, #intro, #final{
-  border: 1px solid black;
+#submit, #a-btn, #next {
+  background-color: #336699;
+  border: 1px solid #336699;
+}
+
+div:not(.navigation) {
+  padding: 10px 10px 10px 10px;
 }

@@ -11,12 +11,12 @@
   </head>
   <body id="background">
     <nav class="navbar navbar-inverse navbar-static-top">
-      <div class="container">
+      <div class="container navigation">
         <a class ="navbar-brand" href="#">jQuery Quiz Game</a>
         <button class="navbar-toggle" data-toggle="collapse" data-target=".nav-header">
           <span class="glyphicon glyphicon-option-vertical"></span>
         </button>
-        <div class="collapse navbar-collapse nav-header">
+        <div class="navigation collapse navbar-collapse nav-header">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
             <li><a href="https://jquery.com/">jQuery</a></li>
@@ -33,7 +33,7 @@
             <label for="qs">Questions:</label>
             <input type="text" id="amount">
           </div>
-          <button id="submit" type="button" class="btn btn-info">Click To Begin</button>
+          <button id="submit" type="button" class="btn btn-primary">Click To Begin</button>
         </form>
       </div>
     </div>
@@ -50,14 +50,14 @@
         </div>
         <div id="answers">
           <form role="form">
-            <button type="button" class="btn btn-block btn-primary answer-btn" id="c1">choice 1</button>
-            <button type="button" class="btn btn-block btn-primary answer-btn" id="c2">choice 2</button>
-            <button type="button" class="btn btn-block btn-primary answer-btn" id="c3">choice 3</button>
-            <button type="button" class="btn btn-block btn-primary answer-btn" id="c4">choice 4</button>
+            <button type="button" class="btn btn-block btn-primary answer-btn" id="a-btn">choice 1</button>
+            <button type="button" class="btn btn-block btn-primary answer-btn" id="a-btn">choice 2</button>
+            <button type="button" class="btn btn-block btn-primary answer-btn" id="a-btn">choice 3</button>
+            <button type="button" class="btn btn-block btn-primary answer-btn" id="a-btn">choice 4</button>
           </form>
           <div id="result">
             <p class = "text-center" id="result-text"></p>
-            <button type="button" class="btn btn-sm btn-info pull-right" id="next">Next</button>
+            <button type="button" class="btn btn-sm btn-primary pull-right" id="next">Next</button>
           </div>
         </div>
       </div>
