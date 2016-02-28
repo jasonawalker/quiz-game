@@ -22,14 +22,21 @@ var incorrect = 0;
 
 $(document).ready(function(){
   $("#main").hide();
+  $("#final").hide();
+  $("#warning").hide();
   $("#submit").click(function(){
     amount = $("#amount").val();
-    console.log(amount);
-    updateQuestions(0);
-    $("#intro").fadeOut("200", function(){
-      $("#main").fadeIn("200");
-      $("#next").hide();
-    })
+
+    if(checkInput()){
+      $("#warning").hide();
+      updateQuestions(0);
+      $("#intro").fadeOut("200", function(){
+        $("#main").fadeIn("200");
+        $("#next").hide();
+      })
+    } else {
+      $("#warning").fadeIn("200");
+    }
   })
 
   $(".answer-btn").click(function(){
@@ -48,25 +55,40 @@ $(document).ready(function(){
         $("#main").fadeIn("200");
       })
     } else {
-      console.log("we done");
+      $("#main").fadeOut("200", function(){
+        showFinal();
+      });
     }
   })
 });
 
-//function showFinal
+function checkInput(){
+  var input = $("#amount").val();
+  if(input == "" || input < 1 || input > questions.length){
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function showFinal(){
+  $("#final").fadeIn("200");
+  $("#you-got").text("You got " + correct + " correct out of " + amount + " questions.")
+}
 
 function checkPlaying(){
   if(currentN==amount){
     playing=false;
-    console.log("done");
   }
 }
 
 function checkCorrect(obj){
   if(obj.text() === questions[currentN].answers[0]){
     $("#result-text").text("Correct!");
+    correct++;
   } else {
     $("#result-text").text("Incorrect.");
+    incorrect++;
   }
 }
 
