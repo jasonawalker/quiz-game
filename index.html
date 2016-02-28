@@ -10,11 +10,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   </head>
   <body id="background">
-    <div class="row">
-      <div id = "header" class = "col-sm-4 col-sm-offset-4">
-        <p class="text-center" id="title">QUIZ</p>
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <a class ="navbar-brand" href="#">jQuery Quiz Game</a>
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".nav-header">
+          <span class="glyphicon glyphicon-option-vertical"></span>
+        </button>
+        <div class="collapse navbar-collapse nav-header">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+            <li><a href="https://jquery.com/">jQuery</a></li>
+            <li><a href="http://www.css3.info/">CSS</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">HTML</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </nav>
     <div class="row">
       <div id="intro" class="col-sm-4 col-sm-offset-4 text-center">
         <form role="form">
@@ -58,7 +69,7 @@
           <p class="text-center" id="you-got"></p>
           <p>Questions You Missed:</p>
             <ul id = "missed">
-              
+
             </ul>
         </div>
       </div>
