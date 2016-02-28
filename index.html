@@ -20,7 +20,7 @@
         <form role="form">
           <div class="form-group">
             <label for="qs">Questions:</label>
-            <input type="text" name="questions">
+            <input type="text" id="amount">
           </div>
           <button id="submit" type="button" class="btn btn-info">Submit To Begin</button>
         </form>
@@ -29,18 +29,22 @@
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2 text-center" id="main">
         <div id="num">
-          <p class="text-right">Question 1<p>
+          <p class="text-right" id="num-text">Question 1<p>
         </div>
         <div id="questions">
           <p class="text-center">temp question<p>
         </div>
         <div id="answers">
           <form role="form">
-            <button type="button" class="btn btn-block btn-primary answerbutton" id="c1">choice 1</button>
-            <button type="button" class="btn btn-block btn-primary answerbutton" id="c2">choice 2</button>
-            <button type="button" class="btn btn-block btn-primary answerbutton" id="c3">choice 3</button>
-            <button type="button" class="btn btn-block btn-primary answerbutton" id="c4">choice 4</button>
+            <button type="button" class="btn btn-block btn-primary answer-btn" id="c1">choice 1</button>
+            <button type="button" class="btn btn-block btn-primary answer-btn" id="c2">choice 2</button>
+            <button type="button" class="btn btn-block btn-primary answer-btn" id="c3">choice 3</button>
+            <button type="button" class="btn btn-block btn-primary answer-btn" id="c4">choice 4</button>
           </form>
+          <div id="result">
+            <p class = "text-center" id="result-text"></p>
+            <button type="button" class="btn btn-sm btn-info pull-right" id="next">Next</button>
+          </div>
         </div>
       </div>
     </div>

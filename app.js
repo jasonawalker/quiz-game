@@ -11,39 +11,62 @@ var questions = [
     question: "question3",
     answers: ["a9","a10","a11","a12"]
   }
-
 ]
 
+var playing = true;
+var amount = 0;
 var currentN = 0;
 var currentQ = questions[currentN];
+var correct = 0;
+var incorrect = 0;
 
 $(document).ready(function(){
   $("#main").hide();
   $("#submit").click(function(){
+    amount = $("#amount").val();
+    console.log(amount);
     updateQuestions(0);
     $("#intro").fadeOut("200", function(){
       $("#main").fadeIn("200");
+      $("#next").hide();
     })
   })
 
-  $(".answerbutton").click(function(){
+  $(".answer-btn").click(function(){
     checkCorrect($(this));
     currentN++;
-    console.log(currentN);
-    $("#main").fadeOut("200",function(){
-      updateQuestions(currentN);
-      $("#main").fadeIn("200");
-    })
+    $("#next").fadeIn("100");
+  })
+
+  $("#next").click(function(){
+    checkPlaying();
+    if(playing){
+      $("#main").fadeOut("200",function(){
+        updateQuestions(currentN);
+        $("#next").hide();
+        $("#result-text").text("");
+        $("#main").fadeIn("200");
+      })
+    } else {
+      console.log("we done");
+    }
   })
 });
 
+//function showFinal
+
+function checkPlaying(){
+  if(currentN==amount){
+    playing=false;
+    console.log("done");
+  }
+}
+
 function checkCorrect(obj){
-  console.log(obj.text());
-  console.log(questions[currentN].answers[0]);
   if(obj.text() === questions[currentN].answers[0]){
-    console.log("correct");
+    $("#result-text").text("Correct!");
   } else {
-    console.log("incorrect");
+    $("#result-text").text("Incorrect.");
   }
 }
 
@@ -51,9 +74,10 @@ function updateQuestions(num){
   var temp = questions[num].answers.slice();
   shuffleArray(temp);
   $("#questions").text(questions[num].question);
-  $(".answerbutton").each(function(i){
+  $(".answer-btn").each(function(i){
       $(this).text(temp[i]);
   })
+  $("#num-text").text("Question " + (currentN+1));
 }
 
 function shuffleArray(array) {
