@@ -40,6 +40,7 @@ $(document).ready(function(){
   })
 
   $(".answer-btn").click(function(){
+    $(".answer-btn").prop('disabled', true);
     checkCorrect($(this));
     currentN++;
     $("#next").fadeIn("100");
@@ -48,6 +49,7 @@ $(document).ready(function(){
   $("#next").click(function(){
     checkPlaying();
     if(playing){
+      $(".answer-btn").prop('disabled', false);
       $("#main").fadeOut("200",function(){
         updateQuestions(currentN);
         $("#next").hide();
