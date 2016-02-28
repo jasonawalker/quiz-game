@@ -11,14 +11,14 @@ var questions = [
     question: "question3",
     answers: ["a9","a10","a11","a12"]
   }
-]
+];
 
 var playing = true;
 var amount = 0;
 var currentN = 0;
 var currentQ = questions[currentN];
 var correct = 0;
-var incorrect = 0;
+var incorrect = [];
 
 $(document).ready(function(){
   $("#main").hide();
@@ -33,18 +33,18 @@ $(document).ready(function(){
       $("#intro").fadeOut("200", function(){
         $("#main").fadeIn("200");
         $("#next").hide();
-      })
+      });
     } else {
       $("#warning").fadeIn("200");
     }
-  })
+  });
 
   $(".answer-btn").click(function(){
     $(".answer-btn").prop('disabled', true);
     checkCorrect($(this));
     currentN++;
     $("#next").fadeIn("100");
-  })
+  });
 
   $("#next").click(function(){
     checkPlaying();
@@ -55,18 +55,18 @@ $(document).ready(function(){
         $("#next").hide();
         $("#result-text").text("");
         $("#main").fadeIn("200");
-      })
+      });
     } else {
       $("#main").fadeOut("200", function(){
         showFinal();
       });
     }
-  })
+  });
 });
 
 function checkInput(){
   var input = $("#amount").val();
-  if(input == "" || input < 1 || input > questions.length){
+  if(input === "" || input < 1 || input > questions.length){
     return false;
   } else {
     return true;
@@ -75,7 +75,12 @@ function checkInput(){
 
 function showFinal(){
   $("#final").fadeIn("200");
-  $("#you-got").text("You got " + correct + " correct out of " + amount + " questions.")
+  $("#you-got").text("You got " + correct + " correct out of " + amount + " questions.");
+  if(incorrect.length===0){
+    $("#missed").append('<li>None!</li>');
+  }
+  for(var i=0; i<incorrect.length;i++)
+    $("#missed").append('<li>'+questions[incorrect[i]].question+'</li>');
 }
 
 function checkPlaying(){
@@ -90,7 +95,7 @@ function checkCorrect(obj){
     correct++;
   } else {
     $("#result-text").text("Incorrect.");
-    incorrect++;
+    incorrect.push(currentN);
   }
 }
 
@@ -100,7 +105,7 @@ function updateQuestions(num){
   $("#questions").text(questions[num].question);
   $(".answer-btn").each(function(i){
       $(this).text(temp[i]);
-  })
+  });
   $("#num-text").text("Question " + (currentN+1));
 }
 
