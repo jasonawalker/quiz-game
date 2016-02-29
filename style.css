@@ -16,3 +16,9 @@
 div:not(.navigation) {
   padding: 10px 10px 10px 10px;
 }
+
+.text, #num-text, #result-text, #question-text, #final {
+  font-family: "Verdana";
+  color: white;
+  font-weight: bold;
+}

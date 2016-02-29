@@ -13,20 +13,20 @@ var questions = [
   }
 ];
 
-var playing = true;
-var amount = 0;
-var currentN = 0;
-var currentQ = questions[currentN];
-var correct = 0;
-var incorrect = [];
+var playing = true,
+    amount = 0,
+    currentN = 0,
+    currentQ = questions[currentN],
+    correct = 0,
+    incorrect = [];
 
 $(document).ready(function(){
   $("#main").hide();
   $("#final").hide();
   $("#warning").hide();
+  $("#max-questions").text(questions.length);
   $("#submit").click(function(){
     amount = $("#amount").val();
-
     if(checkInput()){
       $("#warning").hide();
       updateQuestions(0);
@@ -102,7 +102,7 @@ function checkCorrect(obj){
 function updateQuestions(num){
   var temp = questions[num].answers.slice();
   shuffleArray(temp);
-  $("#questions").text(questions[num].question);
+  $("#question-text").text(questions[num].question);
   $(".answer-btn").each(function(i){
       $(this).text(temp[i]);
   });
