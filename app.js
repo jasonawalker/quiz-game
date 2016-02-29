@@ -1,15 +1,35 @@
 var questions = [
   {
-    question: "question1",
-    answers: ["a1","a2","a3","a4"]
+    question: "What continent is cut into 2 fairly equal halves by the Tropic of Capricorn?",
+    answers: ["Australia","Africa","South America","Europe"]
   },
   {
-    question: "question2",
-    answers: ["a5","a6","a7","a8"]
+    question: "What is the world's longest river?",
+    answers: ["Amazon","Nile","Mississippi","Franklin"]
   },
   {
-    question: "question3",
-    answers: ["a9","a10","a11","a12"]
+    question: "What is the main color of the Chinese flag?",
+    answers: ["Red","White","Yellow","Black"]
+  },
+  {
+    question: "What city is home to the Broncos?",
+    answers: ["Denver","Philadelphia","Atlanta","Cincinati"]
+  },
+  {
+    question: "Who is the current manager of Chelsea FC?",
+    answers: ["Guus Hiddink","Carlo Ancelotti","Jose Mourinho","Eden Hazard"]
+  },
+  {
+    question: "Which mammal has the longest gestation period?",
+    answers: ["Elephant","Human","Cheetah","Pig"]
+  },
+  {
+    question: "What do you get if you breed a goat with a sheep?",
+    answers: ["A Geep","A Poat","A Goap","A Sheet"]
+  },
+  {
+    question: "Portugal had 6 kings with what first name?",
+    answers: ["John","Henry","Paul","James"]
   }
 ];
 
