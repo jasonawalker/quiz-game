@@ -7,3 +7,4 @@ Small project made to test knowledge of jQuery, HTML, and CSS.
 - Pull data from an array
 - Options menu to pick how many questions
 - Show missed words at the end
+//clegg
